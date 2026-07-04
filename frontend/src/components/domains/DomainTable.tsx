@@ -94,7 +94,7 @@ export function DomainTable({ services, selectedIds, onSelectionChange, onEdit, 
       header: 'Cost',
       cell: info => {
         const v = info.getValue()
-        return <span className="text-ink-500 text-sm font-mono">{v ? `$${Number(v).toLocaleString()}` : '—'}</span>
+        return <span className="text-ink-500 text-sm font-mono">{v ? Number(v).toLocaleString() : '—'}</span>
       },
     }),
     ch.accessor('days_remaining', {
