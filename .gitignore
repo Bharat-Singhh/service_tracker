@@ -1,0 +1,69 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+ENV/
+*.env
+.env
+.pytest_cache/
+
+# Node
+node_modules/
+pnpm-lock.yaml
+yarn.lock
+package-lock.json
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.DS_Store
+
+# Vite / frontend
+dist/
+/.vite
+
+# Docker
+docker-compose.override.yml
+**/docker-compose.override.yml
+
+# IDE / editor
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp
+*~
+
+# Logs
+*.log
+logs/
+
+# Database files
+*.db
+*.sqlite3
+
+# Secrets / credentials
+*.pem
+*.key
+*.crt
+
+# Python virtual environment folders
+backend/.venv/
+backend/venv/
+
+# Misc
+*.out
+*.tmp
+*.temp
+
+# Ignore local environment files and secrets
+local.env
+secrets.env
+
+# Ignore generated front-end build artifacts
+frontend/dist/

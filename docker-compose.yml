@@ -1,0 +1,40 @@
+services:
+  backend:
+    build:
+      context: ./backend
+    container_name: domain-tracker-backend
+    restart: unless-stopped
+    env_file:
+      - ./backend/.env
+    environment:
+      - DATABASE_URL=sqlite:////app/data/domain_tracker.db
+      - TZ=Asia/Kolkata
+    volumes:
+      - domain_tracker_data:/app/data
+    ports:
+      - "8000:8000"
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/health')"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 10s
+
+  frontend:
+    build:
+      context: ./frontend
+      args:
+        # This is baked into the JS bundle at build time.
+        # Point it at wherever the backend is reachable from the BROWSER
+        # (not from inside the Docker network) — e.g. your server's IP/domain.
+        VITE_API_URL: ${VITE_API_URL:-http://localhost:8000}
+    container_name: domain-tracker-frontend
+    restart: unless-stopped
+    depends_on:
+      - backend
+    ports:
+      - "3000:80"
+
+volumes:
+  domain_tracker_data:
+    driver: local

@@ -1,0 +1,7 @@
+Service Name,Entity Name,Location,Start Date,Expiration Date,Status,Service Provider,Account Details,Contact Details,NDA Status,NDA Expire Date,Cost
+Domain,example.com,US,2023-09-01,2026-09-01,Active,Cloudflare,acc-12345,John Doe / john@example.com,N/A,,1200.00
+Domain,mysite.org,,2024-01-15,2026-08-20,Active,Namecheap,,,N/A,,800.00
+SSL,app.example.com,US,2025-01-01,2026-07-10,Active,Let's Encrypt,,,N/A,,0.00
+NDA,Vendor ABC Ltd,,2024-06-01,2026-06-01,Signed,,Contract ref: NDA-2024-003,Legal: legal@example.com,Signed,2026-06-01,
+Software Licence,Adobe Creative Cloud,India,2025-04-01,2026-04-01,Active,Adobe,Team licence x10,it@example.com,N/A,,5400.00
+Domain,oldproject.net,,2022-01-01,2024-01-15,Expired,Bluehost,acc-old,,N/A,,

@@ -1,0 +1,7 @@
+domain,subdomain,platform,renewal_date,expiry_date,ssl_expiry_date,notes
+example.com,,Cloudflare,2026-08-01,2026-09-01,2026-08-15,Main corporate site
+example.com,app,AWS,,2026-10-10,2026-10-01,Customer portal
+mysite.org,,Namecheap,2026-07-20,2026-08-20,2026-08-05,
+shopnow.in,,GoDaddy,2026-07-15,2026-07-15,2026-07-10,Renewal pending - high priority
+oldproject.net,,Bluehost,2026-01-01,2026-01-15,2026-01-10,Legacy project - may decommission
+testlab.dev,staging,Vercel,,2026-12-01,2026-11-25,Internal staging environment

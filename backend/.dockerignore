@@ -1,0 +1,7 @@
+__pycache__
+*.pyc
+.env
+domain_tracker.db
+.venv
+venv/
+*.egg-info
